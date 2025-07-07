@@ -31,4 +31,4 @@ jobs:
     if: (github.ref == 'refs/heads/main')
     name: Run Docker container on main branch
     steps:
-      - run: docker run -e BRANCH=main fabiogazzoni/cicd-simple-pipeline:${{ github.sha }}
+      - run: docker run -e BRANCH=main fabiogazzoni/cicd-simple-pipeline:${{github.ref_name }}-${{ github.run_id }}
