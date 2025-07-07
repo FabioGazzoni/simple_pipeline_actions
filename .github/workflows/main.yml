@@ -23,7 +23,7 @@ jobs:
           file: Dockerfile
           context: .
           push: true
-          tags: fabiogazzoni/cicd-simple-pipeline:${{ github.sha }}.fabiogazzoni/cicd-simple-pipeline:${{github.ref_name }}-${{ github.run_number }}
+          tags: fabiogazzoni/cicd-simple-pipeline:${{ github.sha }}.fabiogazzoni/cicd-simple-pipeline:${{github.ref_name }}-${{ github.run_id }}
 
   docker-run-main:
     needs: [ docker-build ]
